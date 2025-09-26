@@ -1,0 +1,87 @@
+/* خلفية */
+.background {
+  background: url("img/AXON.jpg") no-repeat center center/cover;
+  filter: blur(8px);
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* المحتوى */
+.container {
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+/* اللوجو */
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+/* العنوان */
+h1 {
+  font-size: 2.5em;
+  margin: 10px 0 30px;
+  font-weight: bold;
+}
+
+/* صور المنتجات */
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.image-wrapper img {
+  width: 200px;
+  height: 250px;
+  border-radius: 12px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.image-wrapper img:hover {
+  transform: scale(1.15);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* زرار الطلب بخلفية طريق */
+.order-section {
+  position: relative;
+  display: inline-block;
+  margin-top: 30px;
+}
+
+#orderBtn {
+  padding: 15px 40px;
+  font-size: 1.2em;
+  background: url("img/road.jpg") no-repeat center center/cover;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  font-weight: bold;
+}
+
+/* الشاحنة */
+.truck {
+  position: absolute;
+  top: -60px;       /* فوق الزرار */
+  right: -120px;    /* تبدأ من اليمين */
+  width: 100px;     /* حجم الشاحنة */
+  transition: right 3s linear;
+  z-index: 2;
+}
+
+/* حركة الشاحنة */
+.truck.move {
+  left: 100%; /* تتحرك لحد اليمين */
+}
